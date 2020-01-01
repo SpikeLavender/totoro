@@ -5,7 +5,7 @@
 <configuration>
     <!--加载外部properties文件-->
     <properties resource="jdbc.properties"></properties>
-<!--    <properties resource="redis.properties"></properties>-->
+    <properties resource="redis.properties"></properties>
     <!--开启驼峰转换-->
     <settings>
         <setting name="mapUnderscoreToCamelCase" value="true"/>

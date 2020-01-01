@@ -10,6 +10,7 @@
     <settings>
         <setting name="mapUnderscoreToCamelCase" value="true"/>
         <setting name="cacheEnabled" value="true"/>
+        <setting name="logImpl" value="STDOUT_LOGGING" />
     </settings>
     <!--给实体类的全限定类名起别名-->
     <typeAliases>

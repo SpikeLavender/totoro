@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0ca01b4-21d5-4f28-8689-516c592a75f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../mybatis-plugin/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mybatis-plugin/src/main/java/com/totoro/mapper/IOrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mybatis-plugin/src/main/java/com/totoro/mapper/IUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mybatis-plugin/src/main/java/com/totoro/plugin/MyPlugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mybatis-plugin/src/main/java/com/totoro/pojo/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mybatis-plugin/src/main/java/com/totoro/pojo/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mybatis-plugin/src/main/java/com/totoro/pojo/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mybatis-plugin/src/main/resources/com/totoro/mapper/IOrderMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mybatis-plugin/src/main/resources/com/totoro/mapper/IUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mybatis-plugin/src/main/resources/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mybatis-plugin/src/main/resources/sqlMapConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mybatis-plugin/src/test/java/com/totoro/PluginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mybatis-use-annotation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mybatis-use-annotation/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b0ca01b4-21d5-4f28-8689-516c592a75f0" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,17 +18,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
+            <state relative-caret-position="286">
               <caret line="13" column="20" selection-start-line="10" selection-start-column="4" selection-end-line="39" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/totoro/OneToOneTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="419">
-              <caret line="20" column="20" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="28" selection-end-column="5" />
+              <caret line="20" column="20" selection-start-line="16" selection-start-column="4" selection-end-line="28" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/totoro/mapper/IUserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="11" selection-end-line="42" selection-end-column="9" />
+            <state relative-caret-position="396">
+              <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -123,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/totoro/mapper/IOrderMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+            <state relative-caret-position="418">
+              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -188,7 +174,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="340" />
     <option name="y" value="2" />
     <option name="width" value="1400" />
@@ -200,8 +186,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -332,6 +316,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -471,6 +457,7 @@
       <workItem from="1577682397903" duration="7523000" />
       <workItem from="1577697942671" duration="6422000" />
       <workItem from="1577854724803" duration="10000" />
+      <workItem from="1577970621874" duration="637000" />
     </task>
     <servers />
   </component>
@@ -507,13 +494,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14612000" />
+    <option name="totallyTimeSpent" value="15249000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="340" y="2" width="1400" height="1000" extended-state="0" />
+    <frame x="340" y="2" width="1400" height="1000" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3250751" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3310811" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -623,7 +610,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
+        <state relative-caret-position="286">
           <caret line="13" column="20" selection-start-line="10" selection-start-column="4" selection-end-line="39" selection-end-column="19" />
         </state>
       </provider>
@@ -635,13 +622,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/totoro/mapper/IUserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="11" selection-end-line="42" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -686,13 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/totoro/mapper/IOrderMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/totoro/pojo/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="880">
@@ -707,10 +680,24 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/totoro/OneToOneTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
-          <caret line="20" column="20" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="28" selection-end-column="5" />
+          <caret line="20" column="20" selection-start-line="16" selection-start-column="4" selection-end-line="28" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/totoro/mapper/IOrderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/totoro/mapper/IUserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
         </state>
       </provider>
     </entry>

@@ -1,12 +1,8 @@
 package com.hetengjiao.service.impl;
 
 import com.hetengjiao.dao.AccountDao;
-import com.hetengjiao.dao.impl.JdbcAccountDaoImpl;
-import com.hetengjiao.factory.BeanFactory;
 import com.hetengjiao.pojo.Account;
 import com.hetengjiao.service.TransferService;
-import com.hetengjiao.utils.ConnectionUtils;
-import com.hetengjiao.utils.TransactionManager;
 
 import java.sql.SQLException;
 
@@ -27,7 +23,7 @@ public class TransferServiceImpl implements TransferService {
 			to.setMoney(to.getMoney() + money);
 
 			accountDao.updateAccountByCardNo(from);
-			int c = 1 / 0;
+			//int c = 1 / 0;
 			accountDao.updateAccountByCardNo(to);
 	}
 }

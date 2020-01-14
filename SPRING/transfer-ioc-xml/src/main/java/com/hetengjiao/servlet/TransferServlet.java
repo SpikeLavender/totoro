@@ -1,13 +1,14 @@
 package com.hetengjiao.servlet;
 
 
-import com.hetengjiao.factory.BeanFactory;
 import com.hetengjiao.factory.ProxyFactory;
 import com.hetengjiao.pojo.Result;
 import com.hetengjiao.service.TransferService;
-import com.hetengjiao.service.impl.TransferServiceImpl;
 import com.hetengjiao.utils.JsonUtils;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,9 +21,20 @@ public class TransferServlet extends HttpServlet {
 	//private TransferService transferService = new TransferServiceImpl();
 	//private TransferService transferService = (TransferService) BeanFactory.getBean("transferService");
 
-	private ProxyFactory proxyFactory = (ProxyFactory) BeanFactory.getBean("proxyFactory");
-	private TransferService transferService
-			= (TransferService) proxyFactory.getCglibProxy(BeanFactory.getBean("transferService"));
+	//private ProxyFactory proxyFactory = (ProxyFactory) BeanFactory.getBean("proxyFactory");
+	//private TransferService transferService
+	//		= (TransferService) proxyFactory.getCglibProxy(BeanFactory.getBean("transferService"));
+
+	private TransferService transferService;
+
+	@Override
+	public void init() throws ServletException {
+		super.init();
+		WebApplicationContext webApplicationContext = WebApplicationContextUtils.getWebApplicationContext(this.getServletContext());
+
+		ProxyFactory proxyFactory = (ProxyFactory) webApplicationContext.getBean("proxyFactory");
+		transferService = (TransferService) proxyFactory.getCglibProxy(webApplicationContext.getBean("transferService"));
+	}
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {

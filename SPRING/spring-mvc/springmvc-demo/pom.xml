@@ -7,10 +7,7 @@
   <groupId>com.lagou.edu</groupId>
   <artifactId>springmvc-demo</artifactId>
   <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>../imvc</module>
-    </modules>
-    <packaging>pom</packaging>
+  <packaging>war</packaging>
 
   <name>springmvc-demo Maven Webapp</name>
   <!-- FIXME change it to the project's website -->

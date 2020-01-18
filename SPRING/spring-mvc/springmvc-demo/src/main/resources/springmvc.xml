@@ -54,7 +54,7 @@
 
     <mvc:interceptors>
         <!--拦截所有handler-->
-<!--        <bean class="com.lagou.edu.interceptor.MyInterceptor01" />-->
+<!--        <bean class="com.lagou.edu.interceptor.SecurityInterceptor" />-->
 
 
         <mvc:interceptor>

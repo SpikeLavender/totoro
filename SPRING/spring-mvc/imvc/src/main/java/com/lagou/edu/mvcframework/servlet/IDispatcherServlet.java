@@ -1,9 +1,6 @@
 package com.lagou.edu.mvcframework.servlet;
 
-import com.lagou.edu.mvcframework.annotation.IAutowired;
-import com.lagou.edu.mvcframework.annotation.IController;
-import com.lagou.edu.mvcframework.annotation.IRequestMapping;
-import com.lagou.edu.mvcframework.annotation.IServeice;
+import com.lagou.edu.mvcframework.annotation.*;
 import com.lagou.edu.mvcframework.pojo.Handler;
 import org.apache.commons.lang3.StringUtils;
 
@@ -80,6 +77,14 @@ public class IDispatcherServlet extends HttpServlet {
 				baseUrl = annotation.value(); // 等同于/demo
 			}
 
+			//处理权限
+			String[] values = {};
+			if (aClass.isAnnotationPresent(ISecurity.class)) {
+				ISecurity annotation = aClass.getAnnotation(ISecurity.class);
+				values = annotation.value(); // username
+
+			}
+
 			//获取方法
 			Method[] methods = aClass.getMethods();
 			for (Method method : methods) {
@@ -95,6 +100,8 @@ public class IDispatcherServlet extends HttpServlet {
 				//把method所有信息及url封装为Handler
 				Handler handler = new Handler(entry.getValue(), method, Pattern.compile(url));
 
+				handler.getSecurities().addAll(Arrays.asList(values));
+
 				//计算方法的参数位置信息 query(HttpServletRequest request, HttpServletResponse response, String name)
 				Parameter[] parameters = method.getParameters();
 				for (int i = 0; i < parameters.length; i++) {
@@ -109,6 +116,10 @@ public class IDispatcherServlet extends HttpServlet {
 					}
 				}
 
+				if (method.isAnnotationPresent(ISecurity.class)) {
+					ISecurity security = method.getAnnotation(ISecurity.class);
+					handler.getSecurities().addAll(Arrays.asList(security.value()));
+				}
 				//建立url和method之间的映射关系（map缓存起来）
 				handlerMapping.add(handler);
 			}
@@ -284,6 +295,14 @@ public class IDispatcherServlet extends HttpServlet {
 
 		//以下就是为了向参数数组中塞值，而且还得保证参数的顺序和方法中形参顺序一致
 		Map<String, String[]> parameterMap = req.getParameterMap();
+
+		//判断参数中是否有username，且username是否具有权限
+		String[] username = parameterMap.getOrDefault("username", null);
+		if (username == null || !handler.getSecurities().containsAll(Arrays.asList(username))) {
+			resp.getWriter().write("401 does not have access permission.");
+			return;
+		}
+
 		//遍历request中所有参数（填充除了request和response之外的参数）
 		for (Map.Entry<String, String[]> param : parameterMap.entrySet()) {
 			// name=1&name=2 name[1,2]

@@ -2,7 +2,9 @@ package com.lagou.edu.mvcframework.pojo;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 import java.util.regex.Pattern;
 
 /**
@@ -19,11 +21,14 @@ public class Handler {
 
 	private Map<String, Integer> paramIndexMapping; //参数顺序，是为了进行参数绑定，key是参数名，value代表是第几个参数<name,2>
 
+	private Set<String> securities; //有权限的用户
+
 	public Handler(Object controller, Method method, Pattern pattern) {
 		this.controller = controller;
 		this.method = method;
 		this.pattern = pattern;
 		this.paramIndexMapping = new HashMap<>();
+		this.securities = new HashSet<>();
 	}
 
 	public Object getController() {
@@ -56,5 +61,13 @@ public class Handler {
 
 	public void setParamIndexMapping(Map<String, Integer> paramIndexMapping) {
 		this.paramIndexMapping = paramIndexMapping;
+	}
+
+	public Set<String> getSecurities() {
+		return securities;
+	}
+
+	public void setSecurities(Set<String> securities) {
+		this.securities = securities;
 	}
 }
